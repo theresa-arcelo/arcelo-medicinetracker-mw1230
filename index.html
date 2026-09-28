@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dashboard - MedTracker</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>MedTracker</h1>
+      <nav>
+        <a href="index.html" class="active">Dashboard</a>
+        <a href="records.html">Records</a>
+        <a href="add.html">Add</a>
+        <a href="edit.html">Edit</a>
+      </nav>
+    </header>
+
+    <h2>Dashboard</h2>
+
+    <div class="summary" id="summary">
+      Loading...
+    </div>
+
+    <h2 style="margin-top: 25px;">Recent Medications</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Dosage</th>
+          <th>Frequency</th>
+          <th>Duration</th>
+          <th>Category</th>
+        </tr>
+      </thead>
+      <tbody id="medTable"></tbody>
+    </table>
+  </div>
+
+  <script src="script.js"></script>
+  <script>
+    loadDashboard();
+  </script>
+</body>
+</html>

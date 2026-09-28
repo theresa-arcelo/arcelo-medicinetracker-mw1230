@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Add Medication - MedTracker</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>MedTracker</h1>
+      <nav>
+        <a href="index.html">Dashboard</a>
+        <a href="records.html">Records</a>
+        <a href="add.html" class="active">Add</a>
+        <a href="edit.html">Edit</a>
+      </nav>
+    </header>
+
+    <h2>Add New Medication</h2>
+
+    <form onsubmit="addMedication(); return false;">
+      <div class="form-group">
+        <label>Medication Name</label>
+        <input type="text" id="name" placeholder="e.g. Ibuprofen">
+      </div>
+
+      <div class="form-group">
+        <label>Dosage (mg)</label>
+        <input type="number" id="dosage" placeholder="200">
+      </div>
+
+      <div class="form-group">
+        <label>Frequency (per day)</label>
+        <input type="number" id="frequency" placeholder="3">
+      </div>
+
+      <div class="form-group">
+        <label>Duration (days)</label>
+        <input type="number" id="duration" min="1" placeholder="7">
+      </div>
+
+      <div class="form-group">
+        <label>Start Date</label>
+        <input type="date" id="start_date">
+      </div>
+
+      <div class="form-group">
+        <label>Category</label>
+        <select id="category">
+          <option value="Painkiller">Painkiller</option>
+          <option value="Antibiotic">Antibiotic</option>
+          <option value="Vitamin">Vitamin</option>
+          <option value="Allergy">Allergy</option>
+          <option value="Other">Other</option>
+        </select>
+      </div>
+
+      <button type="submit">Save Medication</button>
+      <a href="records.html" class="btn btn-secondary">Cancel</a>
+    </form>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

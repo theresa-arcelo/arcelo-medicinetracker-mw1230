@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Records - MedTracker</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>MedTracker</h1>
+      <nav>
+        <a href="index.html">Dashboard</a>
+        <a href="records.html" class="active">Records</a>
+        <a href="add.html">Add</a>
+        <a href="edit.html">Edit</a>
+      </nav>
+    </header>
+
+    <h2>All Medication Records</h2>
+
+    <div class="summary" id="summary">
+      Loading...
+    </div>
+
+    <table>
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Name</th>
+          <th>Dosage</th>
+          <th>Frequency</th>
+          <th>Duration</th>
+          <th>Start Date</th>
+          <th>Category</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+      <tbody id="medTable"></tbody>
+    </table>
+
+    <p class="note">Click Edit or Delete to modify a record.</p>
+  </div>
+
+  <script src="script.js"></script>
+  <script>
+    loadMedications();
+  </script>
+</body>
+</html>
